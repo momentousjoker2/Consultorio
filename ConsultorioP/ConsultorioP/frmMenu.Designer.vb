@@ -30,8 +30,8 @@ Partial Class frmMenu
         Me.CitaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegristarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnviarDeMaterialMultimediaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -56,13 +56,13 @@ Partial Class frmMenu
         'PacienteToolStripMenuItem
         '
         Me.PacienteToolStripMenuItem.Name = "PacienteToolStripMenuItem"
-        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.PacienteToolStripMenuItem.Text = "Paciente"
         '
         'MaterialToolStripMenuItem
         '
         Me.MaterialToolStripMenuItem.Name = "MaterialToolStripMenuItem"
-        Me.MaterialToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.MaterialToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.MaterialToolStripMenuItem.Text = "Material"
         '
         'MovimientosToolStripMenuItem
@@ -91,17 +91,17 @@ Partial Class frmMenu
         Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
-        'PagoToolStripMenuItem
-        '
-        Me.PagoToolStripMenuItem.Name = "PagoToolStripMenuItem"
-        Me.PagoToolStripMenuItem.Size = New System.Drawing.Size(284, 26)
-        Me.PagoToolStripMenuItem.Text = "Pago"
-        '
         'HistorialToolStripMenuItem
         '
         Me.HistorialToolStripMenuItem.Name = "HistorialToolStripMenuItem"
         Me.HistorialToolStripMenuItem.Size = New System.Drawing.Size(284, 26)
         Me.HistorialToolStripMenuItem.Text = "Historial"
+        '
+        'PagoToolStripMenuItem
+        '
+        Me.PagoToolStripMenuItem.Name = "PagoToolStripMenuItem"
+        Me.PagoToolStripMenuItem.Size = New System.Drawing.Size(284, 26)
+        Me.PagoToolStripMenuItem.Text = "Pago"
         '
         'EnviarDeMaterialMultimediaToolStripMenuItem
         '
@@ -116,7 +116,7 @@ Partial Class frmMenu
         Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMenu"
         Me.Text = "Menu"
         Me.MenuStrip1.ResumeLayout(False)
