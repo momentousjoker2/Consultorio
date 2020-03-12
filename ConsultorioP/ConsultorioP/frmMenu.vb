@@ -12,6 +12,6 @@
     End Sub
 
     Private Sub CitaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitaToolStripMenuItem.Click
-        frmRegristarCita.ShowDialog()
+        frmCita.ShowDialog()
     End Sub
 End Class

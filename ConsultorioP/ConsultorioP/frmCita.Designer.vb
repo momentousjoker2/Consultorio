@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmRegristarCita
+Partial Class frmCita
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -306,7 +306,7 @@ Partial Class frmRegristarCita
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Numero de cita"
         '
-        'frmRegristarCita
+        'frmCita
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -315,7 +315,7 @@ Partial Class frmRegristarCita
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmRegristarCita"
+        Me.Name = "frmCita"
         Me.Text = "frmRegristar"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)

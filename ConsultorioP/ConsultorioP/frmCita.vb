@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class frmRegristarCita
+Public Class frmCita
     Dim conexion As New SqlConnection("Data Source=.;Initial Catalog= Consultorio;Integrated Security = Yes")
     Dim comando As New SqlCommand
     Dim lector As SqlDataReader
