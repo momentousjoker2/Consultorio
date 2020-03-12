@@ -7,7 +7,11 @@
         frmMaterial.ShowDialog()
     End Sub
 
-    Private Sub RegristarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegristarToolStripMenuItem.Click
+    Private Sub HistorialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialToolStripMenuItem.Click
+        frmHistorial.ShowDialog()
+    End Sub
+
+    Private Sub CitaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitaToolStripMenuItem.Click
         frmRegristarCita.ShowDialog()
     End Sub
 End Class

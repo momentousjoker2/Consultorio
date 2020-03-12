@@ -28,8 +28,6 @@ Partial Class frmMenu
         Me.MaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CitaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegristarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CancelarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnviarDeMaterialMultimediaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,22 +72,9 @@ Partial Class frmMenu
         '
         'CitaToolStripMenuItem
         '
-        Me.CitaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegristarToolStripMenuItem, Me.CancelarToolStripMenuItem})
         Me.CitaToolStripMenuItem.Name = "CitaToolStripMenuItem"
         Me.CitaToolStripMenuItem.Size = New System.Drawing.Size(284, 26)
         Me.CitaToolStripMenuItem.Text = "Cita"
-        '
-        'RegristarToolStripMenuItem
-        '
-        Me.RegristarToolStripMenuItem.Name = "RegristarToolStripMenuItem"
-        Me.RegristarToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.RegristarToolStripMenuItem.Text = "Regristar"
-        '
-        'CancelarToolStripMenuItem
-        '
-        Me.CancelarToolStripMenuItem.Name = "CancelarToolStripMenuItem"
-        Me.CancelarToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.CancelarToolStripMenuItem.Text = "Cancelar"
         '
         'HistorialToolStripMenuItem
         '
@@ -132,8 +117,6 @@ Partial Class frmMenu
     Friend WithEvents MaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CitaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegristarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CancelarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EnviarDeMaterialMultimediaToolStripMenuItem As ToolStripMenuItem
