@@ -14,4 +14,8 @@
     Private Sub CitaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CitaToolStripMenuItem.Click
         frmCita.ShowDialog()
     End Sub
+
+    Private Sub EnviarDeMaterialMultimediaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnviarDeMaterialMultimediaToolStripMenuItem.Click
+        frmEnvioMaterial.ShowDialog()
+    End Sub
 End Class
