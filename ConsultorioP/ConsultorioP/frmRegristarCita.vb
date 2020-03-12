@@ -88,7 +88,6 @@ Public Class frmRegristarCita
         command.Transaction = transaction
         Try
             command.CommandText = "insert into Cita (id,idPaciente,fecha,horaInicio,edo) VALUES (" & txtIdCita.Text & "," & idPaciente & ",'" & CDate(Fecha) & "','" & horaC.TimeOfDay.ToString & "','Registrada')"
-            MsgBox(command.CommandText)
             command.ExecuteNonQuery()
             If MsgBox("desea ejecutar transaccion", MsgBoxStyle.YesNo, "Ejecutar") = MsgBoxResult.Yes Then
                 transaction.Commit()
