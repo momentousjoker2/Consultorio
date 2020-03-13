@@ -18,4 +18,8 @@
     Private Sub EnviarDeMaterialMultimediaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnviarDeMaterialMultimediaToolStripMenuItem.Click
         frmEnvioMaterial.ShowDialog()
     End Sub
+
+    Private Sub PagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagoToolStripMenuItem.Click
+        frmPago.ShowDialog()
+    End Sub
 End Class
