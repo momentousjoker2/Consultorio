@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmHistorial
     Dim conexion As New SqlConnection("Data Source=.;Initial Catalog= Consultorio;Integrated Security = Yes")
-    'TODO: Poner limitante sobre 
     Dim comando As New SqlCommand
     Dim lector As SqlDataReader
     Dim transaction As SqlTransaction
@@ -15,8 +14,9 @@ Public Class frmHistorial
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         Dim R = "Select count(*) From Historial"
         comando.CommandText = R
-        txtIdHistorial.Text = CStr(comando.ExecuteScalar())
+        txtIdHistorial.Text = CStr(comando.ExecuteScalar() + 1)
 
+        cboCita.Items.Clear()
 
         comando.CommandText = "Select * From Cita where edo='Registrada'"
         lector = comando.ExecuteReader()
@@ -27,7 +27,6 @@ Public Class frmHistorial
             cboCita.Items.Add(lector(0) & ") " & fecha & " " & lector(3).ToString)
         End While
         lector.Close()
-        cboCita.SelectedIndex = 0
         cboCita.Enabled = True
         txtActividad.Enabled = True
         txtSubjetivo.Enabled = True
@@ -44,7 +43,7 @@ Public Class frmHistorial
 
         lector = comando.ExecuteReader()
         lector.Read()
-        txtEstado.Text = lector("edo")
+        txtEstado.Text = lector(0)
         txtNombre.Text = lector(1)
         txtOcupacion.Text = lector(2)
         txtSexo.Text = lector(3)
@@ -53,7 +52,7 @@ Public Class frmHistorial
         lector.Close()
 
         comando.CommandText = "Select count(*) From Cita Join Paciente on Cita.idPaciente=Paciente.id where Paciente.nombre='" & txtNombre.Text & "' and Cita.edo!='Registrada'"
-        txtSesion.Text = CStr(comando.ExecuteScalar())
+        txtSesion.Text = CStr(comando.ExecuteScalar() + 1)
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click

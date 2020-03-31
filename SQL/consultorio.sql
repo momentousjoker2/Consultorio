@@ -55,5 +55,5 @@ CREATE TABLE EnvioMaterial(
 
    Select c.edo,p.nombre,p.ocupacion,p.sexo,p.domicilio,p.id From Cita As C Join Paciente As P  On C.idPaciente = P.id  where c.id=0 ;
     Select c.edo,p.nombre,p.ocupacion,p.sexo,p.domicilio,p.id From Cita As C Join Paciente As P  On C.idPaciente = P.id  where c.id=0;
-
+	Select e.id,h.sesion, h.actividad , m.titulo, m.material from EnvioMaterial as E Join Historial as h on h.id= e.idHistorial Join Material as m on e.idMaterial=m.id
  

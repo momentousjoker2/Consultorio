@@ -33,6 +33,7 @@ Partial Class frmMenu
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.panelMenuReporte = New System.Windows.Forms.Panel()
+        Me.btnImprimirRecibo = New FontAwesome.Sharp.IconButton()
         Me.btnHistorialPaciente = New FontAwesome.Sharp.IconButton()
         Me.btnListadoPaciente = New FontAwesome.Sharp.IconButton()
         Me.btnListadoMaterial = New FontAwesome.Sharp.IconButton()
@@ -43,17 +44,40 @@ Partial Class frmMenu
         Me.btnSemana = New FontAwesome.Sharp.IconButton()
         Me.btnReporte = New FontAwesome.Sharp.IconButton()
         Me.PanelMenuMovimientos = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnEnvioMaterial = New FontAwesome.Sharp.IconButton()
-        Me.btnPagos = New FontAwesome.Sharp.IconButton()
-        Me.btnHistorial = New FontAwesome.Sharp.IconButton()
+        Me.panelEnvioMaterial = New System.Windows.Forms.Panel()
+        Me.btnEnvio = New System.Windows.Forms.Panel()
+        Me.btnEnvioHistoriar = New FontAwesome.Sharp.IconButton()
+        Me.btnEnvioPeriodo = New FontAwesome.Sharp.IconButton()
+        Me.btnEnvioPaciente = New FontAwesome.Sharp.IconButton()
+        Me.btnAddEnvio = New FontAwesome.Sharp.IconButton()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnCitas = New FontAwesome.Sharp.IconButton()
+        Me.panelCitas = New System.Windows.Forms.Panel()
+        Me.btnCitaEstado = New FontAwesome.Sharp.IconButton()
+        Me.btnCitaPeriodo = New FontAwesome.Sharp.IconButton()
+        Me.btnCitaPaciente = New FontAwesome.Sharp.IconButton()
+        Me.btnAddCita = New FontAwesome.Sharp.IconButton()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.panelPago = New System.Windows.Forms.Panel()
+        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.btnPagoPeriodo = New FontAwesome.Sharp.IconButton()
+        Me.btnPagoPaciente = New FontAwesome.Sharp.IconButton()
+        Me.btnaddPago = New FontAwesome.Sharp.IconButton()
+        Me.btnPagos = New FontAwesome.Sharp.IconButton()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.btnHistorial = New FontAwesome.Sharp.IconButton()
+        Me.panelHistoriar = New System.Windows.Forms.Panel()
+        Me.btnHistoriarPacientePeriodo = New FontAwesome.Sharp.IconButton()
+        Me.btnHistoriarPacientes = New FontAwesome.Sharp.IconButton()
+        Me.btnAddHistorial = New FontAwesome.Sharp.IconButton()
         Me.btMovimientos = New FontAwesome.Sharp.IconButton()
         Me.PanelMenuCatalagos = New System.Windows.Forms.Panel()
         Me.btMateriales = New FontAwesome.Sharp.IconButton()
         Me.btPacientes = New FontAwesome.Sharp.IconButton()
         Me.btnCatalagos = New FontAwesome.Sharp.IconButton()
         Me.panelCentral = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.btnImprimirRecibo = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Restaurar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +88,15 @@ Partial Class frmMenu
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.panelMenuReporte.SuspendLayout()
         Me.PanelMenuMovimientos.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.panelEnvioMaterial.SuspendLayout()
+        Me.btnEnvio.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.panelCitas.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.panelPago.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.panelHistoriar.SuspendLayout()
         Me.PanelMenuCatalagos.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -154,7 +187,7 @@ Partial Class frmMenu
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 116)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(307, 784)
+        Me.Panel2.Size = New System.Drawing.Size(402, 784)
         Me.Panel2.TabIndex = 1
         '
         'BunifuGradientPanel1
@@ -178,7 +211,7 @@ Partial Class frmMenu
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(16, 24)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
         Me.BunifuGradientPanel1.Quality = 10
-        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(273, 766)
+        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(368, 766)
         Me.BunifuGradientPanel1.TabIndex = 0
         '
         'panelMenuReporte
@@ -195,10 +228,32 @@ Partial Class frmMenu
         Me.panelMenuReporte.Controls.Add(Me.btnMes)
         Me.panelMenuReporte.Controls.Add(Me.btnSemana)
         Me.panelMenuReporte.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelMenuReporte.Location = New System.Drawing.Point(0, 462)
+        Me.panelMenuReporte.Location = New System.Drawing.Point(0, 1185)
         Me.panelMenuReporte.Name = "panelMenuReporte"
-        Me.panelMenuReporte.Size = New System.Drawing.Size(252, 450)
+        Me.panelMenuReporte.Size = New System.Drawing.Size(347, 450)
         Me.panelMenuReporte.TabIndex = 5
+        '
+        'btnImprimirRecibo
+        '
+        Me.btnImprimirRecibo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnImprimirRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnImprimirRecibo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnImprimirRecibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnImprimirRecibo.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnImprimirRecibo.IconChar = FontAwesome.Sharp.IconChar.Copy
+        Me.btnImprimirRecibo.IconColor = System.Drawing.Color.White
+        Me.btnImprimirRecibo.IconSize = 30
+        Me.btnImprimirRecibo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImprimirRecibo.Location = New System.Drawing.Point(0, 400)
+        Me.btnImprimirRecibo.Name = "btnImprimirRecibo"
+        Me.btnImprimirRecibo.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
+        Me.btnImprimirRecibo.Rotation = 0R
+        Me.btnImprimirRecibo.Size = New System.Drawing.Size(347, 50)
+        Me.btnImprimirRecibo.TabIndex = 8
+        Me.btnImprimirRecibo.Text = "Imprimir Recibos"
+        Me.btnImprimirRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnImprimirRecibo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnImprimirRecibo.UseVisualStyleBackColor = True
         '
         'btnHistorialPaciente
         '
@@ -215,7 +270,7 @@ Partial Class frmMenu
         Me.btnHistorialPaciente.Name = "btnHistorialPaciente"
         Me.btnHistorialPaciente.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnHistorialPaciente.Rotation = 0R
-        Me.btnHistorialPaciente.Size = New System.Drawing.Size(252, 50)
+        Me.btnHistorialPaciente.Size = New System.Drawing.Size(347, 50)
         Me.btnHistorialPaciente.TabIndex = 7
         Me.btnHistorialPaciente.Text = "Historial Paciente"
         Me.btnHistorialPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -237,7 +292,7 @@ Partial Class frmMenu
         Me.btnListadoPaciente.Name = "btnListadoPaciente"
         Me.btnListadoPaciente.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnListadoPaciente.Rotation = 0R
-        Me.btnListadoPaciente.Size = New System.Drawing.Size(252, 50)
+        Me.btnListadoPaciente.Size = New System.Drawing.Size(347, 50)
         Me.btnListadoPaciente.TabIndex = 6
         Me.btnListadoPaciente.Text = "Listado de Paciente"
         Me.btnListadoPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -259,7 +314,7 @@ Partial Class frmMenu
         Me.btnListadoMaterial.Name = "btnListadoMaterial"
         Me.btnListadoMaterial.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnListadoMaterial.Rotation = 0R
-        Me.btnListadoMaterial.Size = New System.Drawing.Size(252, 50)
+        Me.btnListadoMaterial.Size = New System.Drawing.Size(347, 50)
         Me.btnListadoMaterial.TabIndex = 5
         Me.btnListadoMaterial.Text = "Listado de material"
         Me.btnListadoMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -281,7 +336,7 @@ Partial Class frmMenu
         Me.btnPeriodo.Name = "btnPeriodo"
         Me.btnPeriodo.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnPeriodo.Rotation = 0R
-        Me.btnPeriodo.Size = New System.Drawing.Size(252, 50)
+        Me.btnPeriodo.Size = New System.Drawing.Size(347, 50)
         Me.btnPeriodo.TabIndex = 4
         Me.btnPeriodo.Text = "Citas por periodo"
         Me.btnPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -303,7 +358,7 @@ Partial Class frmMenu
         Me.btnEstado.Name = "btnEstado"
         Me.btnEstado.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnEstado.Rotation = 0R
-        Me.btnEstado.Size = New System.Drawing.Size(252, 50)
+        Me.btnEstado.Size = New System.Drawing.Size(347, 50)
         Me.btnEstado.TabIndex = 3
         Me.btnEstado.Text = "Citas por estado"
         Me.btnEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -325,7 +380,7 @@ Partial Class frmMenu
         Me.btnPaciente.Name = "btnPaciente"
         Me.btnPaciente.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnPaciente.Rotation = 0R
-        Me.btnPaciente.Size = New System.Drawing.Size(252, 50)
+        Me.btnPaciente.Size = New System.Drawing.Size(347, 50)
         Me.btnPaciente.TabIndex = 2
         Me.btnPaciente.Text = "Citas por paciente"
         Me.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -347,7 +402,7 @@ Partial Class frmMenu
         Me.btnMes.Name = "btnMes"
         Me.btnMes.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnMes.Rotation = 0R
-        Me.btnMes.Size = New System.Drawing.Size(252, 50)
+        Me.btnMes.Size = New System.Drawing.Size(347, 50)
         Me.btnMes.TabIndex = 1
         Me.btnMes.Text = "Citas por Mes"
         Me.btnMes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -369,7 +424,7 @@ Partial Class frmMenu
         Me.btnSemana.Name = "btnSemana"
         Me.btnSemana.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnSemana.Rotation = 0R
-        Me.btnSemana.Size = New System.Drawing.Size(252, 50)
+        Me.btnSemana.Size = New System.Drawing.Size(347, 50)
         Me.btnSemana.TabIndex = 0
         Me.btnSemana.Text = "Citas por semana"
         Me.btnSemana.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -388,10 +443,10 @@ Partial Class frmMenu
         Me.btnReporte.IconColor = System.Drawing.Color.White
         Me.btnReporte.IconSize = 40
         Me.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReporte.Location = New System.Drawing.Point(0, 406)
+        Me.btnReporte.Location = New System.Drawing.Point(0, 1140)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Rotation = 0R
-        Me.btnReporte.Size = New System.Drawing.Size(252, 56)
+        Me.btnReporte.Size = New System.Drawing.Size(347, 45)
         Me.btnReporte.TabIndex = 4
         Me.btnReporte.Text = "Reportes"
         Me.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -400,17 +455,29 @@ Partial Class frmMenu
         '
         'PanelMenuMovimientos
         '
+        Me.PanelMenuMovimientos.AutoSize = True
         Me.PanelMenuMovimientos.BackColor = System.Drawing.Color.Transparent
-        Me.PanelMenuMovimientos.Controls.Add(Me.btnEnvioMaterial)
-        Me.PanelMenuMovimientos.Controls.Add(Me.btnPagos)
-        Me.PanelMenuMovimientos.Controls.Add(Me.btnHistorial)
-        Me.PanelMenuMovimientos.Controls.Add(Me.btnCitas)
+        Me.PanelMenuMovimientos.Controls.Add(Me.Panel6)
+        Me.PanelMenuMovimientos.Controls.Add(Me.Panel3)
+        Me.PanelMenuMovimientos.Controls.Add(Me.Panel5)
+        Me.PanelMenuMovimientos.Controls.Add(Me.Panel4)
         Me.PanelMenuMovimientos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelMenuMovimientos.Location = New System.Drawing.Point(0, 212)
+        Me.PanelMenuMovimientos.Location = New System.Drawing.Point(0, 190)
         Me.PanelMenuMovimientos.Name = "PanelMenuMovimientos"
-        Me.PanelMenuMovimientos.Size = New System.Drawing.Size(252, 194)
+        Me.PanelMenuMovimientos.Size = New System.Drawing.Size(347, 950)
         Me.PanelMenuMovimientos.TabIndex = 3
         Me.PanelMenuMovimientos.Visible = False
+        '
+        'Panel6
+        '
+        Me.Panel6.AutoSize = True
+        Me.Panel6.Controls.Add(Me.btnEnvioMaterial)
+        Me.Panel6.Controls.Add(Me.panelEnvioMaterial)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel6.Location = New System.Drawing.Point(0, 700)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(347, 250)
+        Me.Panel6.TabIndex = 12
         '
         'btnEnvioMaterial
         '
@@ -423,60 +490,142 @@ Partial Class frmMenu
         Me.btnEnvioMaterial.IconColor = System.Drawing.Color.White
         Me.btnEnvioMaterial.IconSize = 30
         Me.btnEnvioMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEnvioMaterial.Location = New System.Drawing.Point(0, 150)
+        Me.btnEnvioMaterial.Location = New System.Drawing.Point(0, 0)
         Me.btnEnvioMaterial.Name = "btnEnvioMaterial"
         Me.btnEnvioMaterial.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnEnvioMaterial.Rotation = 0R
-        Me.btnEnvioMaterial.Size = New System.Drawing.Size(252, 50)
+        Me.btnEnvioMaterial.Size = New System.Drawing.Size(347, 50)
         Me.btnEnvioMaterial.TabIndex = 3
         Me.btnEnvioMaterial.Text = "Enviar Material"
         Me.btnEnvioMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEnvioMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEnvioMaterial.UseVisualStyleBackColor = True
         '
-        'btnPagos
+        'panelEnvioMaterial
         '
-        Me.btnPagos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnPagos.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.btnPagos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.btnPagos.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnPagos.IconChar = FontAwesome.Sharp.IconChar.CreditCard
-        Me.btnPagos.IconColor = System.Drawing.Color.White
-        Me.btnPagos.IconSize = 30
-        Me.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPagos.Location = New System.Drawing.Point(0, 100)
-        Me.btnPagos.Name = "btnPagos"
-        Me.btnPagos.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
-        Me.btnPagos.Rotation = 0R
-        Me.btnPagos.Size = New System.Drawing.Size(252, 50)
-        Me.btnPagos.TabIndex = 2
-        Me.btnPagos.Text = "Pago"
-        Me.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnPagos.UseVisualStyleBackColor = True
+        Me.panelEnvioMaterial.AutoSize = True
+        Me.panelEnvioMaterial.Controls.Add(Me.btnEnvio)
+        Me.panelEnvioMaterial.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelEnvioMaterial.Location = New System.Drawing.Point(0, 50)
+        Me.panelEnvioMaterial.Name = "panelEnvioMaterial"
+        Me.panelEnvioMaterial.Size = New System.Drawing.Size(347, 200)
+        Me.panelEnvioMaterial.TabIndex = 11
         '
-        'btnHistorial
+        'btnEnvio
         '
-        Me.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnHistorial.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.btnHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.btnHistorial.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnHistorial.IconChar = FontAwesome.Sharp.IconChar.Folder
-        Me.btnHistorial.IconColor = System.Drawing.Color.White
-        Me.btnHistorial.IconSize = 30
-        Me.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHistorial.Location = New System.Drawing.Point(0, 50)
-        Me.btnHistorial.Name = "btnHistorial"
-        Me.btnHistorial.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
-        Me.btnHistorial.Rotation = 0R
-        Me.btnHistorial.Size = New System.Drawing.Size(252, 50)
-        Me.btnHistorial.TabIndex = 1
-        Me.btnHistorial.Text = "Historial"
-        Me.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnHistorial.UseVisualStyleBackColor = True
+        Me.btnEnvio.AutoSize = True
+        Me.btnEnvio.Controls.Add(Me.btnEnvioHistoriar)
+        Me.btnEnvio.Controls.Add(Me.btnEnvioPeriodo)
+        Me.btnEnvio.Controls.Add(Me.btnEnvioPaciente)
+        Me.btnEnvio.Controls.Add(Me.btnAddEnvio)
+        Me.btnEnvio.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnEnvio.Location = New System.Drawing.Point(0, 0)
+        Me.btnEnvio.Name = "btnEnvio"
+        Me.btnEnvio.Size = New System.Drawing.Size(347, 200)
+        Me.btnEnvio.TabIndex = 8
+        '
+        'btnEnvioHistoriar
+        '
+        Me.btnEnvioHistoriar.AutoSize = True
+        Me.btnEnvioHistoriar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEnvioHistoriar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEnvioHistoriar.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnEnvioHistoriar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnEnvioHistoriar.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnEnvioHistoriar.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnEnvioHistoriar.IconColor = System.Drawing.Color.White
+        Me.btnEnvioHistoriar.IconSize = 30
+        Me.btnEnvioHistoriar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEnvioHistoriar.Location = New System.Drawing.Point(0, 150)
+        Me.btnEnvioHistoriar.Name = "btnEnvioHistoriar"
+        Me.btnEnvioHistoriar.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnEnvioHistoriar.Rotation = 0R
+        Me.btnEnvioHistoriar.Size = New System.Drawing.Size(347, 50)
+        Me.btnEnvioHistoriar.TabIndex = 5
+        Me.btnEnvioHistoriar.Text = "Envio de materiar por Historiar"
+        Me.btnEnvioHistoriar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEnvioHistoriar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEnvioHistoriar.UseVisualStyleBackColor = True
+        '
+        'btnEnvioPeriodo
+        '
+        Me.btnEnvioPeriodo.AutoSize = True
+        Me.btnEnvioPeriodo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEnvioPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEnvioPeriodo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnEnvioPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnEnvioPeriodo.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnEnvioPeriodo.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnEnvioPeriodo.IconColor = System.Drawing.Color.White
+        Me.btnEnvioPeriodo.IconSize = 30
+        Me.btnEnvioPeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEnvioPeriodo.Location = New System.Drawing.Point(0, 100)
+        Me.btnEnvioPeriodo.Name = "btnEnvioPeriodo"
+        Me.btnEnvioPeriodo.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnEnvioPeriodo.Rotation = 0R
+        Me.btnEnvioPeriodo.Size = New System.Drawing.Size(347, 50)
+        Me.btnEnvioPeriodo.TabIndex = 4
+        Me.btnEnvioPeriodo.Text = "Envio de Materiar por periodo"
+        Me.btnEnvioPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEnvioPeriodo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEnvioPeriodo.UseVisualStyleBackColor = True
+        '
+        'btnEnvioPaciente
+        '
+        Me.btnEnvioPaciente.AutoSize = True
+        Me.btnEnvioPaciente.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEnvioPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEnvioPaciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnEnvioPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnEnvioPaciente.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnEnvioPaciente.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnEnvioPaciente.IconColor = System.Drawing.Color.White
+        Me.btnEnvioPaciente.IconSize = 30
+        Me.btnEnvioPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEnvioPaciente.Location = New System.Drawing.Point(0, 50)
+        Me.btnEnvioPaciente.Name = "btnEnvioPaciente"
+        Me.btnEnvioPaciente.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnEnvioPaciente.Rotation = 0R
+        Me.btnEnvioPaciente.Size = New System.Drawing.Size(347, 50)
+        Me.btnEnvioPaciente.TabIndex = 3
+        Me.btnEnvioPaciente.Text = "Envio de materiar por paciente"
+        Me.btnEnvioPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEnvioPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEnvioPaciente.UseVisualStyleBackColor = True
+        '
+        'btnAddEnvio
+        '
+        Me.btnAddEnvio.AutoSize = True
+        Me.btnAddEnvio.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAddEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAddEnvio.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnAddEnvio.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnAddEnvio.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnAddEnvio.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnAddEnvio.IconColor = System.Drawing.Color.White
+        Me.btnAddEnvio.IconSize = 30
+        Me.btnAddEnvio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddEnvio.Location = New System.Drawing.Point(0, 0)
+        Me.btnAddEnvio.Name = "btnAddEnvio"
+        Me.btnAddEnvio.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnAddEnvio.Rotation = 0R
+        Me.btnAddEnvio.Size = New System.Drawing.Size(347, 50)
+        Me.btnAddEnvio.TabIndex = 2
+        Me.btnAddEnvio.Text = "Agregar Envio de materiar"
+        Me.btnAddEnvio.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddEnvio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAddEnvio.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.AutoSize = True
+        Me.Panel3.Controls.Add(Me.btnCitas)
+        Me.Panel3.Controls.Add(Me.panelCitas)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 450)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(347, 250)
+        Me.Panel3.TabIndex = 9
         '
         'btnCitas
         '
@@ -493,12 +642,370 @@ Partial Class frmMenu
         Me.btnCitas.Name = "btnCitas"
         Me.btnCitas.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btnCitas.Rotation = 0R
-        Me.btnCitas.Size = New System.Drawing.Size(252, 50)
+        Me.btnCitas.Size = New System.Drawing.Size(347, 50)
         Me.btnCitas.TabIndex = 0
         Me.btnCitas.Text = "Citas"
         Me.btnCitas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCitas.UseVisualStyleBackColor = True
+        '
+        'panelCitas
+        '
+        Me.panelCitas.AutoSize = True
+        Me.panelCitas.Controls.Add(Me.btnCitaEstado)
+        Me.panelCitas.Controls.Add(Me.btnCitaPeriodo)
+        Me.panelCitas.Controls.Add(Me.btnCitaPaciente)
+        Me.panelCitas.Controls.Add(Me.btnAddCita)
+        Me.panelCitas.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelCitas.Location = New System.Drawing.Point(0, 50)
+        Me.panelCitas.Name = "panelCitas"
+        Me.panelCitas.Size = New System.Drawing.Size(347, 200)
+        Me.panelCitas.TabIndex = 0
+        '
+        'btnCitaEstado
+        '
+        Me.btnCitaEstado.AutoSize = True
+        Me.btnCitaEstado.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCitaEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCitaEstado.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnCitaEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnCitaEstado.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnCitaEstado.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnCitaEstado.IconColor = System.Drawing.Color.White
+        Me.btnCitaEstado.IconSize = 30
+        Me.btnCitaEstado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCitaEstado.Location = New System.Drawing.Point(0, 150)
+        Me.btnCitaEstado.Name = "btnCitaEstado"
+        Me.btnCitaEstado.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnCitaEstado.Rotation = 0R
+        Me.btnCitaEstado.Size = New System.Drawing.Size(347, 50)
+        Me.btnCitaEstado.TabIndex = 5
+        Me.btnCitaEstado.Text = "Citas por estado"
+        Me.btnCitaEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCitaEstado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCitaEstado.UseVisualStyleBackColor = True
+        '
+        'btnCitaPeriodo
+        '
+        Me.btnCitaPeriodo.AutoSize = True
+        Me.btnCitaPeriodo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCitaPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCitaPeriodo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnCitaPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnCitaPeriodo.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnCitaPeriodo.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnCitaPeriodo.IconColor = System.Drawing.Color.White
+        Me.btnCitaPeriodo.IconSize = 30
+        Me.btnCitaPeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCitaPeriodo.Location = New System.Drawing.Point(0, 100)
+        Me.btnCitaPeriodo.Name = "btnCitaPeriodo"
+        Me.btnCitaPeriodo.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnCitaPeriodo.Rotation = 0R
+        Me.btnCitaPeriodo.Size = New System.Drawing.Size(347, 50)
+        Me.btnCitaPeriodo.TabIndex = 4
+        Me.btnCitaPeriodo.Text = "Cita por periodo"
+        Me.btnCitaPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCitaPeriodo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCitaPeriodo.UseVisualStyleBackColor = True
+        '
+        'btnCitaPaciente
+        '
+        Me.btnCitaPaciente.AutoSize = True
+        Me.btnCitaPaciente.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCitaPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCitaPaciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnCitaPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnCitaPaciente.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnCitaPaciente.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnCitaPaciente.IconColor = System.Drawing.Color.White
+        Me.btnCitaPaciente.IconSize = 30
+        Me.btnCitaPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCitaPaciente.Location = New System.Drawing.Point(0, 50)
+        Me.btnCitaPaciente.Name = "btnCitaPaciente"
+        Me.btnCitaPaciente.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnCitaPaciente.Rotation = 0R
+        Me.btnCitaPaciente.Size = New System.Drawing.Size(347, 50)
+        Me.btnCitaPaciente.TabIndex = 3
+        Me.btnCitaPaciente.Text = "citas por paciente"
+        Me.btnCitaPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCitaPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnCitaPaciente.UseVisualStyleBackColor = True
+        '
+        'btnAddCita
+        '
+        Me.btnAddCita.AutoSize = True
+        Me.btnAddCita.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAddCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAddCita.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnAddCita.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnAddCita.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnAddCita.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnAddCita.IconColor = System.Drawing.Color.White
+        Me.btnAddCita.IconSize = 30
+        Me.btnAddCita.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddCita.Location = New System.Drawing.Point(0, 0)
+        Me.btnAddCita.Name = "btnAddCita"
+        Me.btnAddCita.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnAddCita.Rotation = 0R
+        Me.btnAddCita.Size = New System.Drawing.Size(347, 50)
+        Me.btnAddCita.TabIndex = 2
+        Me.btnAddCita.Text = "Agregar Citas"
+        Me.btnAddCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAddCita.UseVisualStyleBackColor = True
+        '
+        'Panel5
+        '
+        Me.Panel5.AutoSize = True
+        Me.Panel5.Controls.Add(Me.panelPago)
+        Me.Panel5.Controls.Add(Me.btnPagos)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 200)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(347, 250)
+        Me.Panel5.TabIndex = 10
+        '
+        'panelPago
+        '
+        Me.panelPago.AutoSize = True
+        Me.panelPago.Controls.Add(Me.IconButton5)
+        Me.panelPago.Controls.Add(Me.btnPagoPeriodo)
+        Me.panelPago.Controls.Add(Me.btnPagoPaciente)
+        Me.panelPago.Controls.Add(Me.btnaddPago)
+        Me.panelPago.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelPago.Location = New System.Drawing.Point(0, 50)
+        Me.panelPago.Name = "panelPago"
+        Me.panelPago.Size = New System.Drawing.Size(347, 200)
+        Me.panelPago.TabIndex = 7
+        '
+        'IconButton5
+        '
+        Me.IconButton5.AutoSize = True
+        Me.IconButton5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.IconButton5.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.IconButton5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.IconButton5.ForeColor = System.Drawing.SystemColors.Control
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.IconButton5.IconColor = System.Drawing.Color.White
+        Me.IconButton5.IconSize = 30
+        Me.IconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton5.Location = New System.Drawing.Point(0, 150)
+        Me.IconButton5.Name = "IconButton5"
+        Me.IconButton5.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.IconButton5.Rotation = 0R
+        Me.IconButton5.Size = New System.Drawing.Size(347, 50)
+        Me.IconButton5.TabIndex = 5
+        Me.IconButton5.Text = "pago por importe"
+        Me.IconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton5.UseVisualStyleBackColor = True
+        '
+        'btnPagoPeriodo
+        '
+        Me.btnPagoPeriodo.AutoSize = True
+        Me.btnPagoPeriodo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPagoPeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPagoPeriodo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnPagoPeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnPagoPeriodo.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnPagoPeriodo.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnPagoPeriodo.IconColor = System.Drawing.Color.White
+        Me.btnPagoPeriodo.IconSize = 30
+        Me.btnPagoPeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagoPeriodo.Location = New System.Drawing.Point(0, 100)
+        Me.btnPagoPeriodo.Name = "btnPagoPeriodo"
+        Me.btnPagoPeriodo.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnPagoPeriodo.Rotation = 0R
+        Me.btnPagoPeriodo.Size = New System.Drawing.Size(347, 50)
+        Me.btnPagoPeriodo.TabIndex = 4
+        Me.btnPagoPeriodo.Text = "Pago por periodo"
+        Me.btnPagoPeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPagoPeriodo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPagoPeriodo.UseVisualStyleBackColor = True
+        '
+        'btnPagoPaciente
+        '
+        Me.btnPagoPaciente.AutoSize = True
+        Me.btnPagoPaciente.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPagoPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPagoPaciente.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnPagoPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnPagoPaciente.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnPagoPaciente.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnPagoPaciente.IconColor = System.Drawing.Color.White
+        Me.btnPagoPaciente.IconSize = 30
+        Me.btnPagoPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagoPaciente.Location = New System.Drawing.Point(0, 50)
+        Me.btnPagoPaciente.Name = "btnPagoPaciente"
+        Me.btnPagoPaciente.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnPagoPaciente.Rotation = 0R
+        Me.btnPagoPaciente.Size = New System.Drawing.Size(347, 50)
+        Me.btnPagoPaciente.TabIndex = 3
+        Me.btnPagoPaciente.Text = "Pago por paciente"
+        Me.btnPagoPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPagoPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPagoPaciente.UseVisualStyleBackColor = True
+        '
+        'btnaddPago
+        '
+        Me.btnaddPago.AutoSize = True
+        Me.btnaddPago.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnaddPago.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnaddPago.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnaddPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnaddPago.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnaddPago.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnaddPago.IconColor = System.Drawing.Color.White
+        Me.btnaddPago.IconSize = 30
+        Me.btnaddPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnaddPago.Location = New System.Drawing.Point(0, 0)
+        Me.btnaddPago.Name = "btnaddPago"
+        Me.btnaddPago.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnaddPago.Rotation = 0R
+        Me.btnaddPago.Size = New System.Drawing.Size(347, 50)
+        Me.btnaddPago.TabIndex = 2
+        Me.btnaddPago.Text = "Agregar Pago"
+        Me.btnaddPago.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnaddPago.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnaddPago.UseVisualStyleBackColor = True
+        '
+        'btnPagos
+        '
+        Me.btnPagos.AutoSize = True
+        Me.btnPagos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPagos.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnPagos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnPagos.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnPagos.IconChar = FontAwesome.Sharp.IconChar.CreditCard
+        Me.btnPagos.IconColor = System.Drawing.Color.White
+        Me.btnPagos.IconSize = 30
+        Me.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPagos.Location = New System.Drawing.Point(0, 0)
+        Me.btnPagos.Name = "btnPagos"
+        Me.btnPagos.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
+        Me.btnPagos.Rotation = 0R
+        Me.btnPagos.Size = New System.Drawing.Size(347, 50)
+        Me.btnPagos.TabIndex = 2
+        Me.btnPagos.Text = "Pago"
+        Me.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnPagos.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.AutoSize = True
+        Me.Panel4.Controls.Add(Me.btnHistorial)
+        Me.Panel4.Controls.Add(Me.panelHistoriar)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(347, 200)
+        Me.Panel4.TabIndex = 9
+        '
+        'btnHistorial
+        '
+        Me.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHistorial.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnHistorial.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnHistorial.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnHistorial.IconColor = System.Drawing.Color.White
+        Me.btnHistorial.IconSize = 30
+        Me.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHistorial.Location = New System.Drawing.Point(0, 0)
+        Me.btnHistorial.Name = "btnHistorial"
+        Me.btnHistorial.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
+        Me.btnHistorial.Rotation = 0R
+        Me.btnHistorial.Size = New System.Drawing.Size(347, 50)
+        Me.btnHistorial.TabIndex = 1
+        Me.btnHistorial.Text = "Historial"
+        Me.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnHistorial.UseVisualStyleBackColor = True
+        '
+        'panelHistoriar
+        '
+        Me.panelHistoriar.AutoSize = True
+        Me.panelHistoriar.Controls.Add(Me.btnHistoriarPacientePeriodo)
+        Me.panelHistoriar.Controls.Add(Me.btnHistoriarPacientes)
+        Me.panelHistoriar.Controls.Add(Me.btnAddHistorial)
+        Me.panelHistoriar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.panelHistoriar.Location = New System.Drawing.Point(0, 50)
+        Me.panelHistoriar.Name = "panelHistoriar"
+        Me.panelHistoriar.Size = New System.Drawing.Size(347, 150)
+        Me.panelHistoriar.TabIndex = 6
+        '
+        'btnHistoriarPacientePeriodo
+        '
+        Me.btnHistoriarPacientePeriodo.AutoSize = True
+        Me.btnHistoriarPacientePeriodo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnHistoriarPacientePeriodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHistoriarPacientePeriodo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnHistoriarPacientePeriodo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnHistoriarPacientePeriodo.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnHistoriarPacientePeriodo.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnHistoriarPacientePeriodo.IconColor = System.Drawing.Color.White
+        Me.btnHistoriarPacientePeriodo.IconSize = 30
+        Me.btnHistoriarPacientePeriodo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHistoriarPacientePeriodo.Location = New System.Drawing.Point(0, 100)
+        Me.btnHistoriarPacientePeriodo.Name = "btnHistoriarPacientePeriodo"
+        Me.btnHistoriarPacientePeriodo.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnHistoriarPacientePeriodo.Rotation = 0R
+        Me.btnHistoriarPacientePeriodo.Size = New System.Drawing.Size(347, 50)
+        Me.btnHistoriarPacientePeriodo.TabIndex = 4
+        Me.btnHistoriarPacientePeriodo.Text = "Historiar de paciente por periodo"
+        Me.btnHistoriarPacientePeriodo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHistoriarPacientePeriodo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnHistoriarPacientePeriodo.UseVisualStyleBackColor = True
+        '
+        'btnHistoriarPacientes
+        '
+        Me.btnHistoriarPacientes.AutoSize = True
+        Me.btnHistoriarPacientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnHistoriarPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnHistoriarPacientes.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnHistoriarPacientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnHistoriarPacientes.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnHistoriarPacientes.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnHistoriarPacientes.IconColor = System.Drawing.Color.White
+        Me.btnHistoriarPacientes.IconSize = 30
+        Me.btnHistoriarPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHistoriarPacientes.Location = New System.Drawing.Point(0, 50)
+        Me.btnHistoriarPacientes.Name = "btnHistoriarPacientes"
+        Me.btnHistoriarPacientes.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnHistoriarPacientes.Rotation = 0R
+        Me.btnHistoriarPacientes.Size = New System.Drawing.Size(347, 50)
+        Me.btnHistoriarPacientes.TabIndex = 3
+        Me.btnHistoriarPacientes.Text = "Historiar por paciente"
+        Me.btnHistoriarPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnHistoriarPacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnHistoriarPacientes.UseVisualStyleBackColor = True
+        '
+        'btnAddHistorial
+        '
+        Me.btnAddHistorial.AutoSize = True
+        Me.btnAddHistorial.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAddHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAddHistorial.Flip = FontAwesome.Sharp.FlipOrientation.Normal
+        Me.btnAddHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.btnAddHistorial.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnAddHistorial.IconChar = FontAwesome.Sharp.IconChar.Folder
+        Me.btnAddHistorial.IconColor = System.Drawing.Color.White
+        Me.btnAddHistorial.IconSize = 30
+        Me.btnAddHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddHistorial.Location = New System.Drawing.Point(0, 0)
+        Me.btnAddHistorial.Name = "btnAddHistorial"
+        Me.btnAddHistorial.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.btnAddHistorial.Rotation = 0R
+        Me.btnAddHistorial.Size = New System.Drawing.Size(347, 50)
+        Me.btnAddHistorial.TabIndex = 2
+        Me.btnAddHistorial.Text = "Agregar Historiar"
+        Me.btnAddHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAddHistorial.UseVisualStyleBackColor = True
         '
         'btMovimientos
         '
@@ -512,10 +1019,10 @@ Partial Class frmMenu
         Me.btMovimientos.IconColor = System.Drawing.Color.White
         Me.btMovimientos.IconSize = 40
         Me.btMovimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btMovimientos.Location = New System.Drawing.Point(0, 156)
+        Me.btMovimientos.Location = New System.Drawing.Point(0, 145)
         Me.btMovimientos.Name = "btMovimientos"
         Me.btMovimientos.Rotation = 0R
-        Me.btMovimientos.Size = New System.Drawing.Size(252, 56)
+        Me.btMovimientos.Size = New System.Drawing.Size(347, 45)
         Me.btMovimientos.TabIndex = 2
         Me.btMovimientos.Text = "Movimientos"
         Me.btMovimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -529,9 +1036,9 @@ Partial Class frmMenu
         Me.PanelMenuCatalagos.Controls.Add(Me.btMateriales)
         Me.PanelMenuCatalagos.Controls.Add(Me.btPacientes)
         Me.PanelMenuCatalagos.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelMenuCatalagos.Location = New System.Drawing.Point(0, 56)
+        Me.PanelMenuCatalagos.Location = New System.Drawing.Point(0, 45)
         Me.PanelMenuCatalagos.Name = "PanelMenuCatalagos"
-        Me.PanelMenuCatalagos.Size = New System.Drawing.Size(252, 100)
+        Me.PanelMenuCatalagos.Size = New System.Drawing.Size(347, 100)
         Me.PanelMenuCatalagos.TabIndex = 1
         Me.PanelMenuCatalagos.Visible = False
         '
@@ -550,7 +1057,7 @@ Partial Class frmMenu
         Me.btMateriales.Name = "btMateriales"
         Me.btMateriales.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btMateriales.Rotation = 0R
-        Me.btMateriales.Size = New System.Drawing.Size(252, 50)
+        Me.btMateriales.Size = New System.Drawing.Size(347, 50)
         Me.btMateriales.TabIndex = 1
         Me.btMateriales.Text = "Materiales"
         Me.btMateriales.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -572,7 +1079,7 @@ Partial Class frmMenu
         Me.btPacientes.Name = "btPacientes"
         Me.btPacientes.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
         Me.btPacientes.Rotation = 0R
-        Me.btPacientes.Size = New System.Drawing.Size(252, 50)
+        Me.btPacientes.Size = New System.Drawing.Size(347, 50)
         Me.btPacientes.TabIndex = 0
         Me.btPacientes.Text = "Pacientes"
         Me.btPacientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -594,7 +1101,7 @@ Partial Class frmMenu
         Me.btnCatalagos.Location = New System.Drawing.Point(0, 0)
         Me.btnCatalagos.Name = "btnCatalagos"
         Me.btnCatalagos.Rotation = 0R
-        Me.btnCatalagos.Size = New System.Drawing.Size(252, 56)
+        Me.btnCatalagos.Size = New System.Drawing.Size(347, 45)
         Me.btnCatalagos.TabIndex = 0
         Me.btnCatalagos.Text = "Catalagos"
         Me.btnCatalagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -603,6 +1110,7 @@ Partial Class frmMenu
         '
         'panelCentral
         '
+        Me.panelCentral.BackColor = System.Drawing.SystemColors.ControlDark
         Me.panelCentral.BackgroundImage = CType(resources.GetObject("panelCentral.BackgroundImage"), System.Drawing.Image)
         Me.panelCentral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill
@@ -610,33 +1118,11 @@ Partial Class frmMenu
         Me.panelCentral.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.panelCentral.GradientTopLeft = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.panelCentral.GradientTopRight = System.Drawing.Color.FromArgb(CType(CType(2, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(17, Byte), Integer))
-        Me.panelCentral.Location = New System.Drawing.Point(307, 116)
+        Me.panelCentral.Location = New System.Drawing.Point(402, 116)
         Me.panelCentral.Name = "panelCentral"
         Me.panelCentral.Quality = 10
-        Me.panelCentral.Size = New System.Drawing.Size(1093, 784)
+        Me.panelCentral.Size = New System.Drawing.Size(998, 784)
         Me.panelCentral.TabIndex = 2
-        '
-        'btnImprimirRecibo
-        '
-        Me.btnImprimirRecibo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnImprimirRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnImprimirRecibo.Flip = FontAwesome.Sharp.FlipOrientation.Normal
-        Me.btnImprimirRecibo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.btnImprimirRecibo.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnImprimirRecibo.IconChar = FontAwesome.Sharp.IconChar.Copy
-        Me.btnImprimirRecibo.IconColor = System.Drawing.Color.White
-        Me.btnImprimirRecibo.IconSize = 30
-        Me.btnImprimirRecibo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImprimirRecibo.Location = New System.Drawing.Point(0, 400)
-        Me.btnImprimirRecibo.Name = "btnImprimirRecibo"
-        Me.btnImprimirRecibo.Padding = New System.Windows.Forms.Padding(40, 0, 0, 0)
-        Me.btnImprimirRecibo.Rotation = 0R
-        Me.btnImprimirRecibo.Size = New System.Drawing.Size(252, 50)
-        Me.btnImprimirRecibo.TabIndex = 8
-        Me.btnImprimirRecibo.Text = "Imprimir Recibos"
-        Me.btnImprimirRecibo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnImprimirRecibo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnImprimirRecibo.UseVisualStyleBackColor = True
         '
         'frmMenu
         '
@@ -663,6 +1149,25 @@ Partial Class frmMenu
         Me.BunifuGradientPanel1.PerformLayout()
         Me.panelMenuReporte.ResumeLayout(False)
         Me.PanelMenuMovimientos.ResumeLayout(False)
+        Me.PanelMenuMovimientos.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.panelEnvioMaterial.ResumeLayout(False)
+        Me.panelEnvioMaterial.PerformLayout()
+        Me.btnEnvio.ResumeLayout(False)
+        Me.btnEnvio.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.panelCitas.ResumeLayout(False)
+        Me.panelCitas.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.panelPago.ResumeLayout(False)
+        Me.panelPago.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.panelHistoriar.ResumeLayout(False)
+        Me.panelHistoriar.PerformLayout()
         Me.PanelMenuCatalagos.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -699,4 +1204,28 @@ Partial Class frmMenu
     Friend WithEvents btnSemana As FontAwesome.Sharp.IconButton
     Friend WithEvents btnReporte As FontAwesome.Sharp.IconButton
     Friend WithEvents btnImprimirRecibo As FontAwesome.Sharp.IconButton
+    Friend WithEvents panelCitas As Panel
+    Friend WithEvents btnCitaEstado As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnCitaPeriodo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnCitaPaciente As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnAddCita As FontAwesome.Sharp.IconButton
+    Friend WithEvents panelEnvioMaterial As Panel
+    Friend WithEvents btnEnvio As Panel
+    Friend WithEvents btnEnvioHistoriar As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEnvioPeriodo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEnvioPaciente As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnAddEnvio As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents panelPago As Panel
+    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnPagoPeriodo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnPagoPaciente As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnaddPago As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents panelHistoriar As Panel
+    Friend WithEvents btnHistoriarPacientePeriodo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnHistoriarPacientes As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnAddHistorial As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel6 As Panel
 End Class

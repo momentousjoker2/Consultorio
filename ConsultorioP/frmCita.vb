@@ -70,7 +70,7 @@ Public Class frmCita
         cbHoraD.Enabled = True
         Dim R = "Select count(*) From Cita"
         comando.CommandText = R
-        txtIdCita.Text = CStr(comando.ExecuteScalar())
+        txtIdCita.Text = CStr(comando.ExecuteScalar() + 1)
 
     End Sub
 

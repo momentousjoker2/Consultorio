@@ -67,4 +67,22 @@ Public Class frmMaterial
             txtMaterial.Text = OpenFileDialog1.FileName
         End If
     End Sub
+
+    Private Sub cbTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbTipo.SelectedIndexChanged
+        '156, 22 originaal con boton
+        '237, 22 sin boton
+        '152, 101
+        If cbTipo.Text = "Archvios" Then
+            ''txtMaterial.SetBounds(114, 82, 118, 19)
+            btnBuscar.Visible = True
+        Else
+            ''txtMaterial.SetBounds(114, 82, 237, 86)
+            btnBuscar.Visible = False
+        End If
+        MsgBox(" x " & txtMaterial.Bounds.X)
+        MsgBox(" y " & txtMaterial.Bounds.Y)
+        MsgBox(" Width " & txtMaterial.Bounds.Width)
+        MsgBox(" Height " & txtMaterial.Bounds.Height)
+
+    End Sub
 End Class

@@ -40,6 +40,8 @@ Partial Class frmEnvioMaterial
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtActividad = New System.Windows.Forms.TextBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtTipo = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtMaterial = New System.Windows.Forms.TextBox()
         Me.cboTitulo = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -48,8 +50,6 @@ Partial Class frmEnvioMaterial
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnEnviar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtTipo = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -180,6 +180,7 @@ Partial Class frmEnvioMaterial
         Me.GroupBox3.Size = New System.Drawing.Size(524, 100)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Visible = False
         '
         'cboSesion
         '
@@ -212,8 +213,9 @@ Partial Class frmEnvioMaterial
         '
         Me.txtActividad.Enabled = False
         Me.txtActividad.Location = New System.Drawing.Point(87, 50)
+        Me.txtActividad.Multiline = True
         Me.txtActividad.Name = "txtActividad"
-        Me.txtActividad.Size = New System.Drawing.Size(303, 22)
+        Me.txtActividad.Size = New System.Drawing.Size(431, 44)
         Me.txtActividad.TabIndex = 1
         '
         'GroupBox4
@@ -229,6 +231,23 @@ Partial Class frmEnvioMaterial
         Me.GroupBox4.Size = New System.Drawing.Size(524, 169)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
+        '
+        'txtTipo
+        '
+        Me.txtTipo.Enabled = False
+        Me.txtTipo.Location = New System.Drawing.Point(87, 55)
+        Me.txtTipo.Name = "txtTipo"
+        Me.txtTipo.Size = New System.Drawing.Size(188, 22)
+        Me.txtTipo.TabIndex = 8
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(21, 60)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(36, 17)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Tipo"
         '
         'txtMaterial
         '
@@ -304,23 +323,6 @@ Partial Class frmEnvioMaterial
         Me.btnCancelar.TabIndex = 0
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(21, 60)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(36, 17)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Tipo"
-        '
-        'txtTipo
-        '
-        Me.txtTipo.Enabled = False
-        Me.txtTipo.Location = New System.Drawing.Point(87, 55)
-        Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(188, 22)
-        Me.txtTipo.TabIndex = 8
         '
         'frmEnvioMaterial
         '

@@ -148,7 +148,7 @@ Partial Class frmMaterial
         'btnBuscar
         '
         Me.btnBuscar.Enabled = False
-        Me.btnBuscar.Location = New System.Drawing.Point(314, 69)
+        Me.btnBuscar.Location = New System.Drawing.Point(314, 100)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 82
@@ -159,7 +159,7 @@ Partial Class frmMaterial
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 75)
+        Me.Label1.Location = New System.Drawing.Point(12, 106)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 17)
         Me.Label1.TabIndex = 81
@@ -169,9 +169,11 @@ Partial Class frmMaterial
         '
         Me.txtMaterial.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MaterialBindingSource, "material", True))
         Me.txtMaterial.Enabled = False
-        Me.txtMaterial.Location = New System.Drawing.Point(152, 70)
+        Me.txtMaterial.Location = New System.Drawing.Point(152, 101)
+        Me.txtMaterial.MaxLength = 255
+        Me.txtMaterial.Multiline = True
         Me.txtMaterial.Name = "txtMaterial"
-        Me.txtMaterial.Size = New System.Drawing.Size(156, 22)
+        Me.txtMaterial.Size = New System.Drawing.Size(237, 86)
         Me.txtMaterial.TabIndex = 80
         '
         'cbTipo
@@ -181,7 +183,7 @@ Partial Class frmMaterial
         Me.cbTipo.Enabled = False
         Me.cbTipo.FormattingEnabled = True
         Me.cbTipo.Items.AddRange(New Object() {"Videos", "Links", "Texto", "Archvios"})
-        Me.cbTipo.Location = New System.Drawing.Point(152, 98)
+        Me.cbTipo.Location = New System.Drawing.Point(152, 70)
         Me.cbTipo.Name = "cbTipo"
         Me.cbTipo.Size = New System.Drawing.Size(237, 24)
         Me.cbTipo.TabIndex = 79
@@ -189,7 +191,7 @@ Partial Class frmMaterial
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 105)
+        Me.Label7.Location = New System.Drawing.Point(12, 77)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(36, 17)
         Me.Label7.TabIndex = 78

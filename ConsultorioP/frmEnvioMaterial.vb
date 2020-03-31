@@ -12,18 +12,19 @@ Public Class frmEnvioMaterial
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Dim R = "Select count(*) From EnvioMaterial"
         comando.CommandText = R
-        txtNumEnvio.Text = CStr(comando.ExecuteScalar())
+        txtNumEnvio.Text = CStr(comando.ExecuteScalar() + 1)
+        cboPaciente.Items.Clear()
 
-        comando.CommandText = "Select * From Paciente "
+        comando.CommandText = "Select Paciente.* From Paciente inner join Cita on Cita.idPaciente=Paciente.id where Cita.edo='Atentido' or Cita.edo='Pagado'"
         lector = comando.ExecuteReader()
 
         While lector.Read()
             cboPaciente.Items.Add(lector(0) & ") " & lector(1).ToString)
         End While
         lector.Close()
-        cboPaciente.SelectedIndex = 0
         cboPaciente.Enabled = True
         btnNuevo.Enabled = False
+        GroupBox3.Visible = True
     End Sub
 
     Private Sub btnEnviar_Click(sender As Object, e As EventArgs) Handles btnEnviar.Click
@@ -52,6 +53,8 @@ Public Class frmEnvioMaterial
             End Try
 
         End Try
+        btnNuevo.Enabled = True
+        btnEnviar.Enabled = False
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -74,10 +77,9 @@ Public Class frmEnvioMaterial
         lector = comando.ExecuteReader()
 
         While lector.Read()
-            cboSesion.Items.Add(lector(0) & ") Sesion" & lector(1).ToString)
+            cboSesion.Items.Add(lector(0) & ") Sesion " & lector(1).ToString)
         End While
         lector.Close()
-        cboSesion.SelectedIndex = 0
         cboSesion.Enabled = True
 
     End Sub
@@ -94,10 +96,9 @@ Public Class frmEnvioMaterial
         lector = comando.ExecuteReader()
 
         While lector.Read()
-            cboTitulo.Items.Add(lector(0) & ") Sesion" & lector(1).ToString)
+            cboTitulo.Items.Add(lector(0) & ") " & lector(1).ToString)
         End While
         lector.Close()
-        cboTitulo.SelectedIndex = 0
         cboSesion.Enabled = True
         cboTitulo.Enabled = True
     End Sub

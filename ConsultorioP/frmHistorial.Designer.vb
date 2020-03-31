@@ -272,6 +272,7 @@ Partial Class frmHistorial
         '
         Me.txtPlan.Enabled = False
         Me.txtPlan.Location = New System.Drawing.Point(123, 252)
+        Me.txtPlan.MaxLength = 255
         Me.txtPlan.Multiline = True
         Me.txtPlan.Name = "txtPlan"
         Me.txtPlan.Size = New System.Drawing.Size(381, 60)
@@ -281,6 +282,7 @@ Partial Class frmHistorial
         '
         Me.txtAnalisis.Enabled = False
         Me.txtAnalisis.Location = New System.Drawing.Point(123, 187)
+        Me.txtAnalisis.MaxLength = 255
         Me.txtAnalisis.Multiline = True
         Me.txtAnalisis.Name = "txtAnalisis"
         Me.txtAnalisis.Size = New System.Drawing.Size(381, 59)
@@ -290,6 +292,7 @@ Partial Class frmHistorial
         '
         Me.txtObjetivo.Enabled = False
         Me.txtObjetivo.Location = New System.Drawing.Point(123, 122)
+        Me.txtObjetivo.MaxLength = 255
         Me.txtObjetivo.Multiline = True
         Me.txtObjetivo.Name = "txtObjetivo"
         Me.txtObjetivo.Size = New System.Drawing.Size(381, 59)
@@ -299,6 +302,7 @@ Partial Class frmHistorial
         '
         Me.txtSubjetivo.Enabled = False
         Me.txtSubjetivo.Location = New System.Drawing.Point(123, 57)
+        Me.txtSubjetivo.MaxLength = 255
         Me.txtSubjetivo.Multiline = True
         Me.txtSubjetivo.Name = "txtSubjetivo"
         Me.txtSubjetivo.Size = New System.Drawing.Size(381, 59)
@@ -308,6 +312,7 @@ Partial Class frmHistorial
         '
         Me.txtActividad.Enabled = False
         Me.txtActividad.Location = New System.Drawing.Point(123, 13)
+        Me.txtActividad.MaxLength = 255
         Me.txtActividad.Multiline = True
         Me.txtActividad.Name = "txtActividad"
         Me.txtActividad.Size = New System.Drawing.Size(381, 38)
