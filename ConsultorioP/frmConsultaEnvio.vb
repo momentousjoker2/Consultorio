@@ -20,11 +20,28 @@ Public Class frmConsultaEnvio
                     cboPaciente.Items.Add(lector(0) & ") " & lector(1).ToString)
                 End While
                 lector.Close()
-                frmPaciente.Visible = True
+                Panel1.Dock = DockStyle.Fill
+                Panel1.Visible = True
+                Panel2.Visible = False
+                panel3.visible = False
             Case 2
-                frmPaciente.Visible = False
-            Case 3
+                Panel2.Dock = DockStyle.Fill
 
+                Panel1.Visible = False
+                Panel2.Visible = True
+                panel3.visible = False
+            Case 3
+                comando.CommandText = "Select DISTINCT  Paciente.* From Paciente inner join Cita on Cita.idPaciente=Paciente.id where Cita.edo='Atentido' or Cita.edo='Pagado'  "
+                lector = comando.ExecuteReader()
+
+                While lector.Read()
+                    ComboBox1.Items.Add(lector(0) & ") " & lector(1).ToString)
+                End While
+                lector.Close()
+                Panel3.Dock = DockStyle.Fill
+                Panel1.Visible = False
+                Panel2.Visible = False
+                panel3.visible = True
         End Select
         ' Add any initialization after the InitializeComponent() call.
 
@@ -45,13 +62,61 @@ Public Class frmConsultaEnvio
         txtTelefono.Text = lector("telefono")
         lector.Close()
 
-        comando.CommandText = "Select e.id,h.sesion, h.actividad , m.titulo, m.material from EnvioMaterial as E Join Historial as h on h.id= e.idHistorial Join Material as m on e.idMaterial=m.id Join Cita as c on h.idCita=c.id where c.idPaciente=" & idPaciente
+        comando.CommandText = "select m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where p.id=" & idPaciente
         lector = comando.ExecuteReader()
-        dtgPaciente.Rows.Clear()
+        dgv1.Rows.Clear()
 
         While lector.Read()
-            dtgPaciente.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4))
+            dgv1.Rows.Add(lector(0), lector(1), lector(2))
         End While
         lector.Close()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        comando.CommandText = "select p.nombre,m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where  c.fecha   BETWEEN '" & dtpInicio.Text & "' and '" & dtpFinal.Text & "'"
+        lector = comando.ExecuteReader()
+        dgv2.Rows.Clear()
+
+        While lector.Read()
+            dgv2.Rows.Add(lector(0), lector(1), lector(2), lector(3))
+        End While
+        lector.Close()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim idPaciente = ComboBox1.Text.ToString.Substring(0, InStr(ComboBox1.Text.ToString, ")") - 1)
+
+        comando.CommandText = "Select * From Paciente where id= " & idPaciente & ""
+        lector = comando.ExecuteReader()
+        lector.Read()
+        txtCorreo.Text = lector("email")
+        txtDomicilio.Text = lector("domicilio")
+        txtTelefono.Text = lector("telefono")
+        lector.Close()
+        cboSesion.Items.Clear()
+
+        comando.CommandText = " select Historial.id,Historial.sesion from Historial inner join Cita on Cita.id = Historial.idCita inner join Paciente on Cita.idPaciente = Paciente.id where Cita.idPaciente =" & idPaciente
+        lector = comando.ExecuteReader()
+
+        While lector.Read()
+            cboSesion.Items.Add(lector(0) & ") Sesion " & lector(1).ToString)
+        End While
+        lector.Close()
+        cboSesion.Enabled = True
+
+    End Sub
+    Private Sub cboSesion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSesion.SelectedIndexChanged
+        Dim idHistorial = cboSesion.Text.ToString.Substring(0, InStr(cboSesion.Text.ToString, ")") - 1)
+        comando.CommandText = "select m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where h.id=" & idHistorial
+
+        lector = comando.ExecuteReader()
+        dgv3.Rows.Clear()
+
+        While lector.Read()
+            dgv3.Rows.Add(lector(0), lector(1), lector(2))
+        End While
+        lector.Close()
+
+    End Sub
+
 End Class

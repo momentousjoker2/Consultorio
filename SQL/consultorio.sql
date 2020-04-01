@@ -52,8 +52,10 @@ CREATE TABLE EnvioMaterial(
 	idHistorial int ,
 	idMaterial int
 	);
+	select * from EnvioMaterial
+	select * from Historial
+	select * from Cita
 
-   Select c.edo,p.nombre,p.ocupacion,p.sexo,p.domicilio,p.id From Cita As C Join Paciente As P  On C.idPaciente = P.id  where c.id=0 ;
-    Select c.edo,p.nombre,p.ocupacion,p.sexo,p.domicilio,p.id From Cita As C Join Paciente As P  On C.idPaciente = P.id  where c.id=0;
-	Select e.id,h.sesion, h.actividad , m.titulo, m.material from EnvioMaterial as E Join Historial as h on h.id= e.idHistorial Join Material as m on e.idMaterial=m.id
- 
+	select m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where p.id=1
+	select p.nombre,m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where  c.fecha   BETWEEN   '1/1/2020'   AND '3/31/2020' 
+	select p.nombre,m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where h.id=1

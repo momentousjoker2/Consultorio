@@ -115,18 +115,15 @@
     End Sub
 
     Private Sub btnEnvioPaciente_Click(sender As Object, e As EventArgs) Handles btnEnvioPaciente.Click
-        opcion = 1
         Openform(New frmConsultaEnvio(1))
 
     End Sub
 
     Private Sub btnEnvioPeriodo_Click(sender As Object, e As EventArgs) Handles btnEnvioPeriodo.Click
-        opcion = 2
-        Openform(New frmConsultaEnvio(0))
+        Openform(New frmConsultaEnvio(2))
     End Sub
 
     Private Sub btnEnvioHistoriar_Click(sender As Object, e As EventArgs) Handles btnEnvioHistoriar.Click
-        opcion = 3
-        Openform(New frmConsultaEnvio(0))
+        Openform(New frmConsultaEnvio(3))
     End Sub
 End Class

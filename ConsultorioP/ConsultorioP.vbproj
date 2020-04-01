@@ -172,12 +172,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCitaSemana.Designer.vb">
-      <DependentUpon>frmCitaSemana.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmCitaSemana.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -247,17 +241,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frmReportView.Designer.vb">
-      <DependentUpon>frmReportView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportView.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCitaSemana.resx">
-      <DependentUpon>frmCitaSemana.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaEnvio.resx">
       <DependentUpon>frmConsultaEnvio.vb</DependentUpon>
     </EmbeddedResource>
@@ -287,9 +272,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReportView.resx">
-      <DependentUpon>frmReportView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\citaSemana.rdlc" />
   </ItemGroup>

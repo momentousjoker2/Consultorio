@@ -72,7 +72,6 @@ Public Class frmEnvioMaterial
         txtTelefono.Text = lector("telefono")
         lector.Close()
         cboSesion.Items.Clear()
-
         comando.CommandText = " select Historial.id,Historial.sesion from Historial inner join Cita on Cita.id = Historial.idCita inner join Paciente on Cita.idPaciente = Paciente.id where Cita.idPaciente =" & idPaciente
         lector = comando.ExecuteReader()
 
