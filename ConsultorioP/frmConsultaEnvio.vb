@@ -23,21 +23,14 @@ Public Class frmConsultaEnvio
                 Panel1.Dock = DockStyle.Fill
                 Panel1.Visible = True
                 Panel2.Visible = False
-<<<<<<< HEAD
-                Panel4.Visible = False
-=======
-                panel3.visible = False
->>>>>>> master
+                Panel3.Visible = False
             Case 2
                 Panel2.Dock = DockStyle.Fill
 
                 Panel1.Visible = False
                 Panel2.Visible = True
-<<<<<<< HEAD
-                Panel4.Visible = False
-=======
-                panel3.visible = False
->>>>>>> master
+
+                Panel3.visible = False
             Case 3
                 comando.CommandText = "Select DISTINCT  Paciente.* From Paciente inner join Cita on Cita.idPaciente=Paciente.id where Cita.edo='Atentido' or Cita.edo='Pagado'  "
                 lector = comando.ExecuteReader()
@@ -46,17 +39,11 @@ Public Class frmConsultaEnvio
                     ComboBox1.Items.Add(lector(0) & ") " & lector(1).ToString)
                 End While
                 lector.Close()
-<<<<<<< HEAD
-                Panel4.Dock = DockStyle.Fill
-                Panel1.Visible = False
-                Panel2.Visible = False
-                Panel4.Visible = True
-=======
+
                 Panel3.Dock = DockStyle.Fill
                 Panel1.Visible = False
                 Panel2.Visible = False
-                panel3.visible = True
->>>>>>> master
+                Panel3.Visible = True
         End Select
         ' Add any initialization after the InitializeComponent() call.
 
@@ -87,11 +74,8 @@ Public Class frmConsultaEnvio
         lector.Close()
     End Sub
 
-<<<<<<< HEAD
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-=======
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
->>>>>>> master
         comando.CommandText = "select p.nombre,m.titulo,m.material, m.tipo from Material as m inner join EnvioMaterial as e on e.idMaterial = m.id inner join Historial as h on e.idHistorial = h.id inner join Cita as c on h.idCita = c.id inner join Paciente as p on c.idPaciente = p.id where  c.fecha   BETWEEN '" & dtpInicio.Text & "' and '" & dtpFinal.Text & "'"
         lector = comando.ExecuteReader()
         dgv2.Rows.Clear()

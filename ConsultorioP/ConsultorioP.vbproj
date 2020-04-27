@@ -163,6 +163,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -192,10 +193,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaCita.Designer.vb">
+      <DependentUpon>frmConsultaCita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCita.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmConsultaEnvio.Designer.vb">
       <DependentUpon>frmConsultaEnvio.vb</DependentUpon>
     </Compile>
     <Compile Include="frmConsultaEnvio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaHistorial.Designer.vb">
+      <DependentUpon>frmConsultaHistorial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaHistorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaPagos.Designer.vb">
+      <DependentUpon>frmConsultaPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaPagos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEnvioMaterial.Designer.vb">
@@ -241,6 +260,18 @@
     <Compile Include="frmPago.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportePaciente.Designer.vb">
+      <DependentUpon>frmReportePaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -257,10 +288,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="frmReportePeriodo.Designer.vb">
+      <DependentUpon>frmReportePeriodo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePeriodo.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmConsultaCita.resx">
+      <DependentUpon>frmConsultaCita.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaEnvio.resx">
       <DependentUpon>frmConsultaEnvio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaHistorial.resx">
+      <DependentUpon>frmConsultaHistorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaPagos.resx">
+      <DependentUpon>frmConsultaPagos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnvioMaterial.resx">
       <DependentUpon>frmEnvioMaterial.vb</DependentUpon>
@@ -283,12 +329,31 @@
     <EmbeddedResource Include="frmPago.resx">
       <DependentUpon>frmPago.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePaciente.resx">
+      <DependentUpon>frmReportePaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePeriodo.resx">
+      <DependentUpon>frmReportePeriodo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporteCita.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteCitaPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteCitaPeriodo.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteEnvioMaterialPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteHistorialPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteMaterialEnviado.rdlc" />
+    <EmbeddedResource Include="Reportes\reporteMaterialEnviadosPeriodo.rdlc" />
+    <EmbeddedResource Include="Reportes\reportePagoPaciente.rdlc" />
+    <EmbeddedResource Include="Reportes\reportePagos.rdlc" />
+    <EmbeddedResource Include="Reportes\reportePagosPeriodo.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DataSet1.xsc">
@@ -376,6 +441,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

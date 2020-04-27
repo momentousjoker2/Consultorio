@@ -82,4 +82,5 @@ Public Class frmConsultaPagos
         End While
         lector.Close()
     End Sub
+
 End Class

@@ -33,10 +33,17 @@ Partial Class frmConsultaCita
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboEstado = New System.Windows.Forms.ComboBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,13 +51,6 @@ Partial Class frmConsultaCita
         Me.dtpFinal = New System.Windows.Forms.DateTimePicker()
         Me.dtpInicio = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,9 +68,10 @@ Partial Class frmConsultaCita
         '
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(9, 10)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(607, 285)
+        Me.Panel1.Size = New System.Drawing.Size(455, 232)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox2
@@ -85,76 +86,86 @@ Partial Class frmConsultaCita
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox2.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(607, 125)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(455, 102)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
         'txtTelefono
         '
         Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(295, 43)
+        Me.txtTelefono.Location = New System.Drawing.Point(221, 35)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(150, 22)
+        Me.txtTelefono.Size = New System.Drawing.Size(114, 20)
         Me.txtTelefono.TabIndex = 7
         '
         'txtDomicilio
         '
         Me.txtDomicilio.Enabled = False
-        Me.txtDomicilio.Location = New System.Drawing.Point(295, 15)
+        Me.txtDomicilio.Location = New System.Drawing.Point(221, 12)
+        Me.txtDomicilio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDomicilio.Name = "txtDomicilio"
-        Me.txtDomicilio.Size = New System.Drawing.Size(150, 22)
+        Me.txtDomicilio.Size = New System.Drawing.Size(114, 20)
         Me.txtDomicilio.TabIndex = 6
         '
         'txtCorreo
         '
         Me.txtCorreo.Enabled = False
-        Me.txtCorreo.Location = New System.Drawing.Point(75, 41)
+        Me.txtCorreo.Location = New System.Drawing.Point(56, 33)
+        Me.txtCorreo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(144, 22)
+        Me.txtCorreo.Size = New System.Drawing.Size(109, 20)
         Me.txtCorreo.TabIndex = 5
         '
         'cboPaciente
         '
         Me.cboPaciente.FormattingEnabled = True
-        Me.cboPaciente.Location = New System.Drawing.Point(75, 11)
+        Me.cboPaciente.Location = New System.Drawing.Point(56, 9)
+        Me.cboPaciente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cboPaciente.Name = "cboPaciente"
-        Me.cboPaciente.Size = New System.Drawing.Size(144, 24)
+        Me.cboPaciente.Size = New System.Drawing.Size(109, 21)
         Me.cboPaciente.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(225, 45)
+        Me.Label6.Location = New System.Drawing.Point(169, 37)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 17)
+        Me.Label6.Size = New System.Drawing.Size(45, 13)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "telefono"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(225, 18)
+        Me.Label5.Location = New System.Drawing.Point(169, 15)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 17)
+        Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Domicilio"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 46)
+        Me.Label4.Location = New System.Drawing.Point(4, 37)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 17)
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Correo"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 18)
+        Me.Label3.Location = New System.Drawing.Point(4, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 17)
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Paciente"
         '
@@ -162,117 +173,13 @@ Partial Class frmConsultaCita
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 132)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 107)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(601, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(527, 122)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.cboEstado)
-        Me.Panel2.Controls.Add(Me.DataGridView2)
-        Me.Panel2.Location = New System.Drawing.Point(625, 12)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(630, 285)
-        Me.Panel2.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(116, 4)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Estado"
-        '
-        'cboEstado
-        '
-        Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Items.AddRange(New Object() {"Atentido", "Registrada", "Pagado"})
-        Me.cboEstado.Location = New System.Drawing.Point(100, 46)
-        Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(121, 24)
-        Me.cboEstado.TabIndex = 2
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 102)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.Size = New System.Drawing.Size(624, 150)
-        Me.DataGridView2.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.btnBuscar)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.dtpFinal)
-        Me.Panel3.Controls.Add(Me.dtpInicio)
-        Me.Panel3.Controls.Add(Me.DataGridView3)
-        Me.Panel3.Location = New System.Drawing.Point(6, 313)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(613, 295)
-        Me.Panel3.TabIndex = 2
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Location = New System.Drawing.Point(277, 112)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 19
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(355, 34)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 17)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "fecha final"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(46, 34)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 17)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "Fecha inicial"
-        '
-        'dtpFinal
-        '
-        Me.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFinal.Location = New System.Drawing.Point(348, 64)
-        Me.dtpFinal.Name = "dtpFinal"
-        Me.dtpFinal.Size = New System.Drawing.Size(200, 22)
-        Me.dtpFinal.TabIndex = 16
-        '
-        'dtpInicio
-        '
-        Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpInicio.Location = New System.Drawing.Point(38, 64)
-        Me.dtpInicio.Name = "dtpInicio"
-        Me.dtpInicio.Size = New System.Drawing.Size(200, 22)
-        Me.dtpInicio.TabIndex = 15
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column11})
-        Me.DataGridView3.Location = New System.Drawing.Point(6, 142)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowHeadersWidth = 51
-        Me.DataGridView3.RowTemplate.Height = 24
-        Me.DataGridView3.Size = New System.Drawing.Size(604, 150)
-        Me.DataGridView3.TabIndex = 0
         '
         'Column1
         '
@@ -294,6 +201,48 @@ Partial Class frmConsultaCita
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         Me.Column3.Width = 125
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.cboEstado)
+        Me.Panel2.Controls.Add(Me.DataGridView2)
+        Me.Panel2.Location = New System.Drawing.Point(469, 10)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(472, 232)
+        Me.Panel2.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(87, 3)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Estado"
+        '
+        'cboEstado
+        '
+        Me.cboEstado.FormattingEnabled = True
+        Me.cboEstado.Items.AddRange(New Object() {"Atentido", "Registrada", "Pagado"})
+        Me.cboEstado.Location = New System.Drawing.Point(75, 37)
+        Me.cboEstado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboEstado.Name = "cboEstado"
+        Me.cboEstado.Size = New System.Drawing.Size(92, 21)
+        Me.cboEstado.TabIndex = 2
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.DataGridView2.Location = New System.Drawing.Point(2, 83)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.Size = New System.Drawing.Size(574, 122)
+        Me.DataGridView2.TabIndex = 0
         '
         'Column4
         '
@@ -322,6 +271,80 @@ Partial Class frmConsultaCita
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 125
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.btnBuscar)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.dtpFinal)
+        Me.Panel3.Controls.Add(Me.dtpInicio)
+        Me.Panel3.Controls.Add(Me.DataGridView3)
+        Me.Panel3.Location = New System.Drawing.Point(4, 254)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(460, 240)
+        Me.Panel3.TabIndex = 2
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(208, 91)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(56, 19)
+        Me.btnBuscar.TabIndex = 19
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(266, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 13)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "fecha final"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(34, 28)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(66, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "Fecha inicial"
+        '
+        'dtpFinal
+        '
+        Me.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpFinal.Location = New System.Drawing.Point(261, 52)
+        Me.dtpFinal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpFinal.Name = "dtpFinal"
+        Me.dtpFinal.Size = New System.Drawing.Size(151, 20)
+        Me.dtpFinal.TabIndex = 16
+        '
+        'dtpInicio
+        '
+        Me.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpInicio.Location = New System.Drawing.Point(28, 52)
+        Me.dtpInicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpInicio.Name = "dtpInicio"
+        Me.dtpInicio.Size = New System.Drawing.Size(151, 20)
+        Me.dtpInicio.TabIndex = 15
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column11})
+        Me.DataGridView3.Location = New System.Drawing.Point(4, 115)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersWidth = 51
+        Me.DataGridView3.RowTemplate.Height = 24
+        Me.DataGridView3.Size = New System.Drawing.Size(592, 122)
+        Me.DataGridView3.TabIndex = 0
         '
         'Column8
         '
@@ -353,12 +376,13 @@ Partial Class frmConsultaCita
         '
         'frmConsultaCita
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1267, 620)
+        Me.ClientSize = New System.Drawing.Size(950, 504)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmConsultaCita"
         Me.Text = "frmConsultaCita"
         Me.Panel1.ResumeLayout(False)

@@ -81,4 +81,6 @@ Public Class frmConsultaCita
         End While
         lector.Close()
     End Sub
+
+
 End Class

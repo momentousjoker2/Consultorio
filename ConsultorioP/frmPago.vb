@@ -12,7 +12,7 @@ Public Class frmPago
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        Dim R = "Select count(*) From EnvioMaterial"
+        Dim R = "Select count(*) From pago"
         comando.CommandText = R
         txtNumeroPago.Text = CStr(comando.ExecuteScalar() + 1)
         cboPaciente.Items.Clear()
@@ -47,7 +47,6 @@ Public Class frmPago
             cboCita.Items.Add(lector(0) & ") " & fecha & " " & lector(3).ToString)
         End While
         lector.Close()
-        cboCita.SelectedIndex = 0
         cboCita.Enabled = True
     End Sub
 

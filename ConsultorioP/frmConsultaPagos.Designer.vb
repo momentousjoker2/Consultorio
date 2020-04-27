@@ -252,9 +252,9 @@ Partial Class frmConsultaPagos
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(135, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.Size = New System.Drawing.Size(55, 17)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Estado"
+        Me.Label1.Text = "Importe"
         '
         'cboImporte
         '

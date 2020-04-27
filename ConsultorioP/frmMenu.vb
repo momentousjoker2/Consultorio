@@ -1,6 +1,16 @@
-﻿Public Class frmMenu
+﻿Imports System.Data.SqlClient
+Imports Microsoft.Reporting.WinForms
+Imports System.Configuration
+
+Public Class frmMenu
+    Dim Conexion As SqlConnection
+
+
     Public opcion As Integer
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Conexion = New SqlConnection(ConfigurationManager.ConnectionStrings("Conexion").ConnectionString)
+        Conexion.Open()
+
         If WindowState = FormWindowState.Normal Then
             maximizar.Visible = True
             Restaurar.Visible = False
@@ -88,6 +98,7 @@
         Else
             hideMenu()
         End If
+
         If subMenu.Visible Then
             subMenu.Visible = False
         Else
@@ -140,11 +151,11 @@
     End Sub
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
-        Openform(New frmConsultaPagos(3))
+        Openform(New frmConsultaPagos(2))
     End Sub
 
     Private Sub btnPagoPeriodo_Click(sender As Object, e As EventArgs) Handles btnPagoPeriodo.Click
-        Openform(New frmConsultaPagos(2))
+        Openform(New frmConsultaPagos(3))
 
     End Sub
 
@@ -164,6 +175,84 @@
     Private Sub btnCitaEstado_Click(sender As Object, e As EventArgs) Handles btnCitaEstado.Click
         Openform(New frmConsultaCita(2))
 
+
+    End Sub
+
+    Private Sub btnReporteCita_Click(sender As Object, e As EventArgs) Handles btnReporteCita.Click
+        Dim Cmd As New SqlCommand("reporteCita", Conexion)
+        Cmd.CommandType = CommandType.StoredProcedure
+        Dim Adaptador As New SqlDataAdapter(Cmd)
+        Dim Data As New Data.DataSet
+        Adaptador.Fill(Data)
+        Data.DataSetName = "DataSet1"
+        Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(Reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Consultorio\ConsultorioP\Reportes\reporteCita.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        Openform(frmReportes)
+        Conexion.Close()
+
+    End Sub
+
+    Private Sub btnReportePagos_Click(sender As Object, e As EventArgs) Handles btnReportePagos.Click
+        Dim Cmd As New SqlCommand("reportePagos", Conexion)
+        Cmd.CommandType = CommandType.StoredProcedure
+        Dim Adaptador As New SqlDataAdapter(Cmd)
+        Dim Data As New Data.DataSet
+        Adaptador.Fill(Data)
+        Data.DataSetName = "DataSet1"
+        Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(Reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Consultorio\ConsultorioP\Reportes\reportePagos.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        Openform(frmReportes)
+        Conexion.Close()
+    End Sub
+
+    Private Sub btnReporteMaterialEnviado_Click(sender As Object, e As EventArgs) Handles btnReporteMaterialEnviado.Click
+        Dim Cmd As New SqlCommand("reporteMaterialEnviado", Conexion)
+        Cmd.CommandType = CommandType.StoredProcedure
+        Dim Adaptador As New SqlDataAdapter(Cmd)
+        Dim Data As New Data.DataSet
+        Adaptador.Fill(Data)
+        Data.DataSetName = "DataSet1"
+        Dim Reportes As New ReportDataSource("DataSet1", Data.Tables(0))
+        frmReportes.ReportViewer1.LocalReport.DataSources.Clear()
+        frmReportes.ReportViewer1.LocalReport.DataSources.Add(Reportes)
+        frmReportes.ReportViewer1.LocalReport.ReportPath = "C:\Consultorio\ConsultorioP\Reportes\reporteMaterialEnviado.rdlc"
+        frmReportes.ReportViewer1.RefreshReport()
+        Openform(frmReportes)
+        Conexion.Close()
+    End Sub
+
+    Private Sub btnReporteMaterialEnviadoPeriodo_Click(sender As Object, e As EventArgs) Handles btnReporteMaterialEnviadoPeriodo.Click
+        Openform(New frmReportePeriodo(3))
+    End Sub
+
+    Private Sub btnReportePagosPeriodo_Click(sender As Object, e As EventArgs) Handles btnReportePagosPeriodo.Click
+        Openform(New frmReportePeriodo(2))
+    End Sub
+
+    Private Sub btnReporteCitaPeriodo_Click(sender As Object, e As EventArgs) Handles btnReporteCitaPeriodo.Click
+        Openform(New frmReportePeriodo(1))
+    End Sub
+
+    Private Sub btnReporteMaterialPaciente_Click(sender As Object, e As EventArgs) Handles btnReporteMaterialPaciente.Click
+        Openform(New frmReportePaciente(1))
+    End Sub
+
+    Private Sub btnReportePagosPaciente_Click(sender As Object, e As EventArgs) Handles btnReportePagosPaciente.Click
+        Openform(New frmReportePaciente(2))
+    End Sub
+
+    Private Sub btnReporteCitaPaciente_Click(sender As Object, e As EventArgs) Handles btnReporteCitaPaciente.Click
+        Openform(New frmReportePaciente(3))
+    End Sub
+
+    Private Sub btnReporteHistoral_Click(sender As Object, e As EventArgs) Handles btnReporteHistoral.Click
+        Openform(New frmReportePaciente(4))
 
     End Sub
 End Class

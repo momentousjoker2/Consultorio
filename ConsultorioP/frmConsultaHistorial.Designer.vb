@@ -94,7 +94,7 @@ Partial Class frmConsultaHistorial
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(677, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(780, 150)
         Me.DataGridView1.TabIndex = 3
         '
         'Column1
@@ -240,7 +240,7 @@ Partial Class frmConsultaHistorial
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(997, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(1114, 150)
         Me.DataGridView2.TabIndex = 4
         '
         'Column7
@@ -336,7 +336,7 @@ Partial Class frmConsultaHistorial
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowHeadersWidth = 51
         Me.DataGridView3.RowTemplate.Height = 24
-        Me.DataGridView3.Size = New System.Drawing.Size(547, 119)
+        Me.DataGridView3.Size = New System.Drawing.Size(949, 119)
         Me.DataGridView3.TabIndex = 5
         '
         'DataGridViewTextBoxColumn7
