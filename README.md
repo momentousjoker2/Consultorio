@@ -28,6 +28,6 @@ El Sistema de Gestión de Consultorio Psicológico es una solución desarrollada
 ## Requisitos del Sistema
 El Sistema de Gestión de Consultorio Psicológico tiene los siguientes requisitos:
 
-- Lenguajes de Programación:
+- Lenguajes de Programación: Visual Net
 - Base de Datos: MySQL.
 
